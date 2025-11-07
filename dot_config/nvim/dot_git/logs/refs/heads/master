@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 032e12dbee56122db12c42a6f4fd643019ed7998 Adelgrin <lamaral2002@gmail.com> 1750181685 -0300	clone: from https://github.com/Adelgrin/kickstart.nvim.git
+032e12dbee56122db12c42a6f4fd643019ed7998 4c20b110cb35d973a39a22acba8748b6844f6efe Adelgrin <lamaral2002@gmail.com> 1750635898 -0300	pull: Fast-forward
+4c20b110cb35d973a39a22acba8748b6844f6efe 3d1fd49aab74546690deccd47a59ca0c3f1816c2 Adelgrin <lamaral2002@gmail.com> 1757588777 -0300	commit: sniprun e nvim tree
+3d1fd49aab74546690deccd47a59ca0c3f1816c2 b87a42427fdaf57e31b00d2803738f68cdd2d475 Adelgrin <lamaral2002@gmail.com> 1758672200 -0300	commit: codeaction config
+b87a42427fdaf57e31b00d2803738f68cdd2d475 215066130fc9b7f2aa85c0bed4754a620b304355 Adelgrin <lamaral2002@gmail.com> 1761680225 -0300	commit: adicionado suporte ao vimtex

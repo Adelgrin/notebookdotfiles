@@ -1,0 +1,1 @@
+pactl set-default-sink alsa_output.usb-Corsair_CORSAIR_VIRTUOSO_Wireless_Gaming_Headset_16aef1bb000100da-00.analog-stereo

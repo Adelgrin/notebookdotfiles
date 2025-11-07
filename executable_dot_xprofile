@@ -1,0 +1,6 @@
+xset -dpms
+xset s blank
+setxkbmap -option compose:ralt
+setxkbmap -option caps:escape
+xset s 300 5
+sleep 2 && xfsettings &

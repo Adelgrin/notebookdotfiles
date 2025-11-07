@@ -1,0 +1,3 @@
+#~/.config/zathura/zathurarc
+map l navigate next
+map h navigate previous
