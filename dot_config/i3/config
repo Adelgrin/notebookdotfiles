@@ -83,6 +83,9 @@ bindsym Mod4+l exec xfce4-screensaver-command --lock
 # bindsym $mod+d exec --no-startup-id dmenu_run -b
 bindsym $mod+d exec --no-startup-id ~/.config/i3/scriptrofi.sh
 
+
+bindsym Print exec xfce4-screenshooter
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
