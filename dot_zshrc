@@ -45,7 +45,7 @@ zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' rehash true
@@ -53,11 +53,13 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # History configurations
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=2000
+HISTDUB=erase
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
@@ -615,7 +617,7 @@ fzf_cd() {
   local base_dir="${1:-.}"
 
   local dir
-  dir=$(find "$base_dir" -type d 2>/dev/null -maxdepth 5 | fzf --height 40% --reverse --border ) || return
+  dir=$(find "$base_dir" -type d 2>/dev/null -maxdepth 5 | fzf --height 40% --reverse --border --preview='ls --color {}' ) || return
 
   cd "$dir" || return
 }
