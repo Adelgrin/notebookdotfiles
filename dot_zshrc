@@ -60,7 +60,7 @@ setopt hist_expire_dups_first # delete duplicates first when HISTFILE size excee
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
-#setopt share_history         # share command history data
+setopt share_history         # share command history data
 
 # force zsh to show the complete history
 alias history="history 0"
@@ -269,6 +269,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias powershell='pwsh'
     alias cat='batcat'
     alias rga='rga-fzf'
+    alias smartkill="ps aux | fzf --header-lines=1 --style=full -m --reverse | awk '{print \$2}' | xargs kill -9 "
 
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
