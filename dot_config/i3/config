@@ -66,12 +66,12 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec qterminal
 bindsym $mod+Return exec ~/.local/bin/i3-new-term
 
 #start file explorer thunar
-bindsym $mod+z exec thunar $(pwd)
+# bindsym $mod+z exec thunar $(pwd)
+bindsym $mod+z exec ~/.local/bin/i3-new-fbrowser
 
 # kill focused window
 bindsym $mod+q kill
