@@ -1,0 +1,15 @@
+#!/bin/bash
+
+dir=$(pwd)
+
+pid=$(xdotool getwindowpid "$(xdotool getwindowfocus)")
+if [ -n "$pid" ]; then
+    # tenta pegar o shell em execução
+    shell_pid=$(pgrep -P "$pid")
+    if [ -n "$shell_pid" ]; then
+        dir=$(readlink -f "/proc/$shell_pid/cwd")
+    fi
+fi
+
+# qterminal -w "$dir" &
+kitty -1 -d "$dir" &
