@@ -13,4 +13,5 @@ if [ -n "$pid" ]; then
 fi
 
 # qterminal -w "$dir" &
-kitty -d $dir &
+kitty -1 -d $dir &
+# -1 serve para instanciar todas as proximas sessões no mesmo server do kitty porem desta maneira não descobri como abrir a janela no dir correto

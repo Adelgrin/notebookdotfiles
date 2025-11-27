@@ -1,0 +1,16 @@
+#!/bin/bash
+
+pid=$(xdotool getwindowpid "$(xdotool getwindowfocus)")
+
+if [ $(readlink -f /proc/$pid/exe) == "/usr/bin/kitty" ]; then
+	name=$(xdotool getwindowname "$(xdotool getwindowfocus)")
+	namecorreto=${name/\~/$HOME}
+	echo $namecorreto
+	if [[ -d $namecorreto ]]; then
+		kitty -1 -d $namecorreto &
+	else
+		kitty -1 -d $(dirname $namecorreto) &
+	fi
+	exit 1
+fi
+kitty -1 -d $HOME
