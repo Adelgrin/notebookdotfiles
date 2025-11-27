@@ -943,4 +943,4 @@ fi
 }
 ### end: completion.zsh ###
 eval "$(zoxide init zsh)"
-
+fastfetch

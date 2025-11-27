@@ -38,8 +38,6 @@ exec --no-startup-id nitrogen --restore
 #exec eval "$(ssh-agent -s)"
 #exec ssh-add ~/.ssh/id_rsa
 
-# exec --no-startup-id sleep 6 && exec setxkbmap -option compose:ralt
-# exec --no-startup-id sleep 6 && exec setxkbmap -option caps:escape
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -68,6 +66,7 @@ tiling_drag modifier titlebar
 # start a terminal
 # bindsym $mod+Return exec qterminal
 bindsym $mod+Return exec ~/.local/bin/i3-new-term
+# bindsym $mod+Return exec ~/.local/bin/i3-new-term2
 
 #start file explorer thunar
 # bindsym $mod+z exec thunar $(pwd)
