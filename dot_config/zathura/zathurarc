@@ -1,3 +1,9 @@
 #~/.config/zathura/zathurarc
 map l navigate next
 map h navigate previous
+map J zoom out
+map K zoom in
+map <C-h> scroll left
+map <C-j> scroll down
+map <C-k> scroll up
+map <C-l> scroll right

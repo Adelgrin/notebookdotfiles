@@ -13,4 +13,4 @@ if [ -n "$pid" ]; then
 fi
 
 # qterminal -w "$dir" &
-kitty  -d $dir &
+kitty -d $dir &

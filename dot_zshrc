@@ -609,7 +609,8 @@ function cd(){
 	if [[ "$#" -eq 0 ]]; then
 		fzf_cd
 	else
-		builtin cd "$@"
+		# builtin cd "$@"
+		z "$@"
 	fi
 }
 
@@ -941,5 +942,5 @@ fi
   'unset' '__fzf_completion_options'
 }
 ### end: completion.zsh ###
-
+eval "$(zoxide init zsh)"
 
