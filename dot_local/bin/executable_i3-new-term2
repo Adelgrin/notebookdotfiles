@@ -1,16 +1,13 @@
 #!/bin/bash
 
-pid=$(xdotool getwindowpid "$(xdotool getwindowfocus)")
-
-if [ $(readlink -f /proc/$pid/exe) == "/usr/bin/kitty" ]; then
-	name=$(xdotool getwindowname "$(xdotool getwindowfocus)")
-	namecorreto=${name/\~/$HOME}
-	echo $namecorreto
-	if [[ -d $namecorreto ]]; then
-		kitty -1 -d $namecorreto &
-	else
-		kitty -1 -d $(dirname $namecorreto) &
-	fi
+kitty_socket=$(lsof -U | grep /tmp/mykitty | awk 'NR==1 {print $9}')
+# > /home/adelgrin/debug
+windowid=$(i3-msg -t get_tree | jq -r '.. | select(.focused? == true).window')
+kittencwd=$(kitty @ --to "unix:$kitty_socket" ls | jq -r --arg id_i3 "$windowid" '.[] | select(.platform_window_id | tostring == $id_i3) | .tabs[].windows[].cwd')
+if [ -z "$kittencwd" ]; then
+	# echo "estou sem argumentos $kitty_socket" > /home/adelgrin/debug
+	kitty -1 &
 	exit 1
 fi
-kitty -1 -d $HOME
+# echo "$windowid $kittencwd $kitty_socket" > /home/adelgrin/debug
+kitty -1 -d $kittencwd &

@@ -1,16 +1,13 @@
 #!/bin/bash
 
-dir=$(pwd)
-
-pid=$(xdotool getwindowpid "$(xdotool getwindowfocus)")
-if [ -n "$pid" ]; then
-    # tenta pegar o shell em execução
-    shell_pid=$(pgrep -P "$pid" | awk 'NR==2')
-    # shell_pid=$(pgrep -P "$pid")
-    if [ -n "$shell_pid" ]; then
-        dir=$(readlink -f "/proc/$shell_pid/cwd")
-    fi
+kitty_socket=$(lsof -U | grep /tmp/mykitty | awk 'NR==1 {print $9}')
+# > /home/adelgrin/debug
+windowid=$(i3-msg -t get_tree | jq -r '.. | select(.focused? == true).window')
+kittencwd=$(kitty @ --to "unix:$kitty_socket" ls | jq -r --arg id_i3 "$windowid" '.[] | select(.platform_window_id | tostring == $id_i3) | .tabs[].windows[].cwd')
+if [ -z "$kittencwd" ]; then
+	# echo "estou sem argumentos $kitty_socket" > /home/adelgrin/debug
+	thunar &
+	exit 1
 fi
-
-# qterminal -w "$dir" &
-thunar $dir
+# echo "$windowid $kittencwd $kitty_socket" > /home/adelgrin/debug
+thunar -w $kittencwd &

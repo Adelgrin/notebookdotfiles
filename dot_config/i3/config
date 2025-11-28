@@ -65,8 +65,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 # bindsym $mod+Return exec qterminal
-bindsym $mod+Return exec ~/.local/bin/i3-new-term
-# bindsym $mod+Return exec ~/.local/bin/i3-new-term2
+# bindsym $mod+Return exec ~/.local/bin/i3-new-term
+bindsym $mod+Return exec ~/.local/bin/i3-new-term2
 
 #start file explorer thunar
 # bindsym $mod+z exec thunar $(pwd)
