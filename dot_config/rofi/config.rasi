@@ -13,8 +13,8 @@ configuration {
 /*	on-menu-canceled: ;*/
 /*	on-menu-error: ;*/
 /*	on-screenshot-taken: ;*/
-/*	terminal: "qterminal";*/
-/*	ssh-client: "ssh";*/
+	terminal: "kitty";
+	ssh-client: "kitten ssh";
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/

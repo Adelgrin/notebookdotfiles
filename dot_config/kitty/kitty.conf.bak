@@ -1732,7 +1732,7 @@ font_size 10.0
 #: See rc_custom_auth <https://sw.kovidgoyal.net/kitty/remote-
 #: control/#rc-custom-auth> for details.
 
-# allow_remote_control no
+ allow_remote_control yes
 
 #: Allow other programs to control kitty. If you turn this on, other
 #: programs can control all aspects of kitty, including sending text
@@ -1761,7 +1761,7 @@ font_size 10.0
 #: yes
 #:     Remote control requests are always accepted.
 
-# listen_on none
+listen_on unix:/tmp/mykitty
 
 #: Listen to the specified socket for remote control connections. Note
 #: that this will apply to all kitty instances. It can be overridden
@@ -2933,6 +2933,6 @@ font_size 10.0
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
