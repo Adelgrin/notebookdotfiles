@@ -173,8 +173,13 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.api.nvim_set_keymap('i', '<Tab>', [[coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"]], { expr = true, noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<S-Tab>', [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], { expr = true, noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<CR>', [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], { expr = true, noremap = true, silent = true })
-
+-- vim.api.nvim_set_keymap('i', '<CR>', [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], { expr = true, noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'i',
+  '<CR>',
+  [[pumvisible() ? coc#_select_confirm() : "\<c-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
+  { noremap = true, silent = true, expr = true }
+) -- se a janela de selecao estiver aberta seleciona, se nao quebra a linha identada com as chaves
 -- Normal mode: code action no cursor
 vim.keymap.set('n', '<leader>ca', '<Plug>(coc-codeaction-cursor)', { silent = true, desc = 'Code Action' })
 
@@ -317,7 +322,6 @@ require('lazy').setup({
   --
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
-
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
@@ -993,12 +997,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
