@@ -5,6 +5,7 @@
 # The following line should contain a sharp s:
 # ß
 # If the above line is not correctly displayed, fix your editor first!
+# isto é um teste
 
 general {
         colors = true
