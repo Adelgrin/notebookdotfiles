@@ -1,0 +1,24 @@
+[manager]
+shell = "zsh"
+
+[opener]
+new-terminal = [
+	{run = 'kitty -d "$1"', orphan = true, for = "unix"},
+	# {run = 'zathura "$1"', orphan = true, for = "unix"},
+]
+
+[open]
+prepend_rules = [
+	{mime = "inode/directory", use = 'new-terminal'},
+	# {name = "*.pdf", use = 'pdfopener'},
+]
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
