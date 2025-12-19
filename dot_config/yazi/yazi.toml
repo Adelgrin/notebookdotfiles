@@ -1,6 +1,7 @@
 [manager]
 shell = "zsh"
 
+
 [opener]
 new-terminal = [
 	{run = 'kitty -d "$1"', orphan = true, for = "unix"},
@@ -22,3 +23,24 @@ run  = "git"
 id   = "git"
 name = "*/"
 run  = "git"
+
+[plugin]
+prepend_preloaders = [
+  { mime = "*.3mf", run = "f3d-preview" },
+  { mime = "*.obj", run = "f3d-preview" },
+  { mime = "*.pts", run = "f3d-preview" },
+  { mime = "*.ply", run = "f3d-preview" },
+  { mime = "application/octet-stream", run = "f3d-preview" },
+  { mime = "*.step", run = "f3d-preview" },
+  { mime = "*.stp", run = "f3d-preview" },
+]
+
+prepend_previewers = [
+  { mime = "*.3mf", run = "f3d-preview" },
+  { mime = "*.obj", run = "f3d-preview" },
+  { mime = "*.pts", run = "f3d-preview" },
+  { mime = "*.ply", run = "f3d-preview" },
+  { mime = "application/octet-stream", run = "f3d-preview" },
+  { mime = "*.step", run = "f3d-preview" },
+  { mime = "*.stp", run = "f3d-preview" },
+]

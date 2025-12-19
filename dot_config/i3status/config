@@ -15,6 +15,7 @@ general {
 
 order += "ipv6"
 # order += "run_watch DHCP"
+order += "run_watch SSH"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
@@ -27,6 +28,10 @@ order += "tztime local"
 
 run_watch DHCP {
 	pidfile = "/var/run/dhcpclient*.pid"
+}
+
+run_watch SSH {
+	pidfile = "/var/run/sshd*.pid"
 }
 
 wireless _first_ {

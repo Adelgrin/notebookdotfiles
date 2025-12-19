@@ -941,7 +941,7 @@ fi
   eval $__fzf_completion_options
   'unset' '__fzf_completion_options'
 }
-y() {
+function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
     yazi "$@" --cwd-file="$tmp"
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -951,4 +951,5 @@ y() {
 }
 ### end: completion.zsh ###
 eval "$(zoxide init zsh)"
+eval "$(bin completion zsh)"
 fastfetch
