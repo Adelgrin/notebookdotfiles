@@ -1,0 +1,60 @@
+[theme]
+theme = "ctp-frappe" # Você pode mudar para "plain", "gruvbox", etc.
+
+[icons]
+icons = "material-nf" # Ativa suporte para os ícones que você já usa
+
+[[block]]
+theme_overrides.idle_bg = "#454B1B"
+block = "net"
+device = "wlan0" # Verifique o nome da sua interface com 'ip link'
+format = "󰒢 W: ($signal_strength at $ssid) $ip"
+inactive_format = "󰞃 W: down"
+interval = 5
+
+[[block]]
+theme_overrides.idle_bg = "#2D4B1B"
+block = "net"
+device = "eth0" # Verifique o nome da sua interface
+format = "󰛳 E: $ip ($speed_down/$speed_up)"
+format_alt = "󰛳 E:($speed_down $graph_down / $speed_up $graph_up)"
+inactive_format = "󰲛 E: down"
+interval = 5
+
+[[block]]
+theme_overrides.idle_bg = "#063660"
+block = "battery"
+device = "BAT0"
+format = "$icon $percentage $time_remaining"
+# last_full_capacity = true
+
+[[block]]
+theme_overrides.idle_bg = "#300660"
+block = "disk_space"
+path = "/"
+format = " {$free}"
+interval = 60
+
+[[block]]
+block = "cpu"
+format = " {$utilization} $barchart"
+interval = 1
+
+[[block]]
+theme_overrides.idle_bg = "#17344F"
+block = "memory"
+format = " {$mem_used} / {$mem_total}"
+format_alt = " {$mem_used_percents}"
+warning_mem = 80
+interval = 1
+
+[[block]]
+theme_overrides.idle_bg = "#174F4E"
+block = "sound"
+format = "󰓃 $icon {$volume}"
+device_kind = "sink"
+
+[[block]]
+block = "time"
+interval = 1
+format = " : $timestamp.datetime(f:'%d-%m-%Y %T')"

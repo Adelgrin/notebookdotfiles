@@ -222,6 +222,7 @@ bindsym $mod+bracketleft exec ~/.config/i3/monaudio.sh
 # finds out, if available)
 bar {
         status_command i3status
+        # status_command i3status-rs ~/.config/i3status-rust/config.toml
 	position top
 	strip_workspace_numbers yes
 	strip_workspace_name no
