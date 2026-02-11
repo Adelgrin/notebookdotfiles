@@ -406,7 +406,8 @@ fzf-file-widget() {
 fzf-file-widget-custom() {
   local file_list_command
   if command -v fd > /dev/null; then
-    file_list_command="fd --type f"
+    #file_list_command="fd --type f"
+    file_list_command="find . -type f"
   else
     file_list_command="find . -type f"
   fi
