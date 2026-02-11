@@ -1,6 +1,6 @@
 setxkbmap -option compose:ralt
 setxkbmap -option caps:escape
 #sleep 2 && xfsettingsd &
-xset -dpms
-xset s blank
-xset s 600 5
+#xset -dpms
+#xset s blank
+#xset s 600 5

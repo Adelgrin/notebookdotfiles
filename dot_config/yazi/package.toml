@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "56971d0"
+rev = "230b9c6"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "56971d0"
+rev = "230b9c6"
 hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "56971d0"
-hash = "36a484acf6a0a0219c543ccb4cee218f"
+rev = "230b9c6"
+hash = "270915fa8282a19908449530ff66f7e2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "56971d0"
-hash = "e2d4bfccf31e5ab05f46fee4797c5215"
+rev = "230b9c6"
+hash = "9ad20d763df07ce40fd09de549d914b0"
 
 [[plugin.deps]]
 use = "hankertrix/augment-command"
@@ -30,8 +30,8 @@ hash = "e02a788e5b8ae0fb47fd0193dda589cc"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "e6007f7"
-hash = "e0b1051849756dd72fca874c320259a"
+rev = "cb6e8ec"
+hash = "424ada4807b20ccd4fc85d1d7c26d1e4"
 
 [[plugin.deps]]
 use = "pareix/telegram-send"
@@ -45,18 +45,18 @@ hash = "c9def7878c94aa9b2171965c13f986c2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "56971d0"
-hash = "492e4757f332e29f982556bf507e043c"
+rev = "230b9c6"
+hash = "2f08b8249b57737e7257298a3b2a2edc"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "56971d0"
+rev = "230b9c6"
 hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
 
 [[plugin.deps]]
 use = "ruudjhuu/f3d-preview"
-rev = "713e8d0"
-hash = "248ffdf21c7006cf32960624db2db586"
+rev = "76d115d"
+hash = "6b2008327d65fe374d99f6b6ff007cba"
 
 [flavor]
 deps = []
