@@ -285,6 +285,7 @@ if [ -x /usr/bin/dircolors ]; then
     export EDITOR=nvim
     export USE_CCACHE=1
     export CCACHE_EXEC=/usr/bin/ccache
+    export DOTNET_ROOT=$HOME/.dotnet
 
     # Take advantage of $LS_COLORS for completion as well
     zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -312,6 +313,9 @@ fi
 export PATH=$HOME/.local/bin:$PATH
 export PATH="$PATH:/home/adelgrin/.cargo/bin"
 export PATH="$PATH:/usr/bin/git"
+export PATH="$PATH:$DOTNET_ROOT"
+export PATH="$PATH:$DOTNET_ROOT/tools"
+export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
 
 #NOTE: configuracao do fzf
 
