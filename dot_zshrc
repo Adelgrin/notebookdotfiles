@@ -273,6 +273,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias powershell='pwsh'
     alias cat='batcat'
     alias rga='rga-fzf'
+    alias feh='kitten icat'
     alias smartkill="ps aux | fzf --header-lines=1 --style=full -m --reverse | awk '{print \$2}' | xargs kill -9 "
 
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
