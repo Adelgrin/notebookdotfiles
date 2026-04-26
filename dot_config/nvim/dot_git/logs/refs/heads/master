@@ -6,3 +6,7 @@ b87a42427fdaf57e31b00d2803738f68cdd2d475 215066130fc9b7f2aa85c0bed4754a620b30435
 215066130fc9b7f2aa85c0bed4754a620b304355 3bebcc05aabd68681c44041f095f99d4c4a9cbd4 Adelgrin <lamaral2002@gmail.com> 1767873984 -0300	commit: autopairs
 3bebcc05aabd68681c44041f095f99d4c4a9cbd4 463e219d19db2e9a69ffe0a56bab065472bc774b Adelgrin <lamaral2002@gmail.com> 1770990052 -0300	commit: indent lines added
 463e219d19db2e9a69ffe0a56bab065472bc774b 8c4b0ae6234bbade6e2df6c8c01296936c77de11 Adelgrin <lamaral2002@gmail.com> 1771610299 -0300	commit: exclude for tabs
+8c4b0ae6234bbade6e2df6c8c01296936c77de11 1ee1f051493e528ec734f732a9ec5bed63314c08 Adelgrin <lamaral2002@gmail.com> 1772809291 -0300	commit: edit readme
+1ee1f051493e528ec734f732a9ec5bed63314c08 e9fc0ebf610a26072da2b6d41b993ac69c4be5a8 Adelgrin <lamaral2002@gmail.com> 1773188358 -0300	commit (amend): edit readme
+e9fc0ebf610a26072da2b6d41b993ac69c4be5a8 86585c490a8a5f1c30882866ea2999feee07536c Adelgrin <lamaral2002@gmail.com> 1773188382 -0300	pull --no-edit: Merge made by the 'ort' strategy.
+86585c490a8a5f1c30882866ea2999feee07536c 372f29a2bf78f7401b51e53782a42dff7c630a22 Adelgrin <lamaral2002@gmail.com> 1773873009 -0300	commit: rust not working fully

@@ -7,6 +7,14 @@
     "plaintex",
     "maintex"
   ],
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/21.1.0/clangd_21.1.0/bin/clangd"
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/21.1.0/clangd_21.1.0/bin/clangd",
+
+	"workspace.ignoredFolders": [
+		"$HOME",
+		"$HOME/.cargo/**",
+		"$HOME/.rustup/**",
+		"$HOME/pkg/mod/**",
+		"$HOMEBREW_PREFIX/**"
+	],
 }
 

@@ -12,3 +12,5 @@
 [remote "upstream"]
 	url = https://github.com/nvim-lua/kickstart.nvim.git
 	fetch = +refs/heads/*:refs/remotes/upstream/*
+[pull]
+	rebase = false
